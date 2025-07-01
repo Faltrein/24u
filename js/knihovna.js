@@ -18,15 +18,11 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         },
         body: JSON.stringify(data)
     })
-    .then(res => res.json())
     .then(resp => {
         if (resp.success) {
-            window.location.href = '/u24/admin';  
+            window.location.href = '/u24/admin';
         } else {
             alert('Špatné přihlašovací údaje.');
         }
-    })
-    .catch(err => {
-        console.error('Chyba:', err);
     });
 });
