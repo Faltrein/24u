@@ -20,7 +20,7 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="/u24/knihovna">Knihovna</a>
+                        <a class="nav-link text-dark" href="/24u/knihovna">Knihovna</a>
                     </li>
                     <li>
                         <button type="button" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn">

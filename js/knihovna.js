@@ -10,8 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         password: document.getElementById('password').value
     };
 
-    console.log(data);
-    fetch('/u24/modules/login.php', {
+    fetch('/24u/modules/login.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -20,7 +19,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     })
     .then(resp => {
         if (resp.success) {
-            window.location.href = '/u24/admin';
+            window.location.href = '/24u/admin';
         } else {
             alert('Špatné přihlašovací údaje.');
         }

@@ -17,7 +17,7 @@ unset($_SESSION['message'], $_SESSION['error']);
     <?php endif; ?>
     
         <h2>Přidat novou knihu</h2>
-        <form method="POST" action="/u24/modules/knihy_router.php" novalidate>
+        <form method="POST" action="/24u/modules/knihy_router.php" novalidate>
             <input type="hidden" name="action" value="add_book" />
             <div class="mb-3">
                 <label for="title" class="form-label">Název knihy</label>
@@ -45,7 +45,7 @@ unset($_SESSION['message'], $_SESSION['error']);
         <hr>
 
         <h2>Import knih ze souboru books.json</h2>
-        <form method="POST" action="/u24/modules/knihy_router.php" >
+        <form method="POST" action="/24u/modules/knihy_router.php" >
             <input type="hidden" name="action" value="import_books" />
             <button type="submit" class="btn btn-secondary">Importovat knihy</button>
         </form>

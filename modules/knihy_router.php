@@ -34,14 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['error'] = "Neplatná data!";
             }
 
-            header('Location: /u24/admin');
+            header('Location: /24u/admin');
             exit;
 
         case 'import_books':
             $jsonPath = dirname(__DIR__) . '/books.json';
             if (!file_exists($jsonPath)) {
                 $_SESSION['error'] = "Soubor books.json nebyl nalezen.";
-                header('Location: /u24/admin');
+                header('Location: /24u/admin');
                 exit;
             }
 
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (!is_array($books)) {
                 $_SESSION['error'] = "Neplatný formát JSON dat.";
-                header('Location: /u24/admin');
+                header('Location: /24u/admin');
                 exit;
             }
 
@@ -83,16 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             $_SESSION['message'] = "$added knih bylo importováno. Přeskočeno duplicit: $skipped.";
-            header('Location: /u24/admin');
+            header('Location: /24u/admin');
             exit;
 
         default:
             $_SESSION['error'] = "Neznámá akce.";
-            header('Location: /u24/admin');
+            header('Location: /24u/admin');
             exit;
     }
 } else {
     $_SESSION['error'] = "Nepodporovaný HTTP method.";
-    header('Location: /u24/admin');
+    header('Location: /24u/admin');
     exit;
 }
