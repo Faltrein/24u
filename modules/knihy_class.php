@@ -16,9 +16,14 @@ class Knihy extends Database {
     }
 
     public function existence_titulu_knihy(string $title): bool {
-        $sql = "SELECT COUNT(*) FROM books WHERE title = :title";
-        $result = $this->query_pole($sql, [':title' => $title]);
-        return (int)$result > 0;
+        $sql = "SELECT COUNT(*) AS pocet FROM books WHERE LOWER(TRIM(title)) = LOWER(TRIM(:title))";
+        $rows = $this->query_pole($sql, [':title' => $title]);
+
+        if (is_array($rows) && count($rows) > 0) {
+            return (int)$rows[0]['pocet'] > 0;
+        }
+
+        return false;
     }
 
     public function pridat_knihu(string $title, string $author, string $annotation, float $rating, int $year): bool {
