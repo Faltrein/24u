@@ -2,9 +2,9 @@
 
 Web spouštím v xamppu, nejsou zde využité žádné frameworky vše je ve složce 24U tedy localhost/24u/ je hp
 
-<h2>Využizé knihovny bootstrap a PDO</h2>
+Využizé knihovny bootstrap a PDO
 
-<h3>Rozpis souborů</h3>
+<h2>Rozpis souborů</h2>
 24U -> vše se směřuje na index který pomocí htaaccess přesměrovává na stránky v pages
 
     -> hlavní layout header login modal main footer je v src/layout/layout.php
@@ -45,5 +45,5 @@ Web spouštím v xamppu, nejsou zde využité žádné frameworky vše je ve slo
             -> v případě jedné knihy pokud existuje jí neuloží
 
             -> v případě jsonu uloží jen ty knihy které nejsou v db
-            
+
     -> scss soubor je v src/scss/main.scss a v layoutu je link pouze na main.css
