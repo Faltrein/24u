@@ -10,6 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         password: document.getElementById('password').value
     };
 
+    console.log(data);
     fetch('/24u/modules/login.php', {
         method: 'POST',
         headers: {
@@ -17,6 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         },
         body: JSON.stringify(data)
     })
+    .then(resp => resp.json())
     .then(resp => {
         if (resp.success) {
             window.location.href = '/24u/admin';

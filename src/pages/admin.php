@@ -15,40 +15,40 @@ unset($_SESSION['message'], $_SESSION['error']);
     <?php if (!empty($error)): ?>
         <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
-    
-        <h2>Přidat novou knihu</h2>
-        <form method="POST" action="/24u/modules/knihy_router.php" novalidate>
-            <input type="hidden" name="action" value="add_book" />
-            <div class="mb-3">
-                <label for="title" class="form-label">Název knihy</label>
-                <input type="text" name="title" id="title" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="author" class="form-label">Autor</label>
-                <input type="text" name="author" id="author" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="annotation" class="form-label">Annotation</label>
-                <input type="text" name="annotation" id="annotation" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="rating" class="form-label">Rating</label>
-                <input type="number" name="rating" id="rating" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="year" class="form-label">Rok vydání</label>
-                <input type="number" name="year" id="year" class="form-control" min="1500" max="<?= date('Y') ?>" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Přidat knihu</button>
-        </form>
-
-        <hr>
-
-        <h2>Import knih ze souboru books.json</h2>
-        <form method="POST" action="/24u/modules/knihy_router.php" >
-            <input type="hidden" name="action" value="import_books" />
-            <button type="submit" class="btn btn-secondary">Importovat knihy</button>
-        </form>
-
-        <hr>
+        <div class="border border-secondary rounded px-4 py-3 mt-3">
+            <h2>Přidat novou knihu</h2>
+            <form method="POST" action="/24u/modules/knihy_router.php" novalidate>
+                <input type="hidden" name="action" value="add_book" />
+                <div class="mb-3">
+                    <label for="title" class="form-label">Název knihy</label>
+                    <input type="text" name="title" id="title" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="author" class="form-label">Autor</label>
+                    <input type="text" name="author" id="author" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="annotation" class="form-label">Annotation</label>
+                    <input type="text" name="annotation" id="annotation" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type="number" name="rating" id="rating" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="year" class="form-label">Rok vydání</label>
+                    <input type="number" name="year" id="year" class="form-control" min="1500" max="<?= date('Y') ?>" required>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button type="submit" class="btn btn-primary">Přidat knihu</button>
+                </div>
+            </form>
+        </div>
+        <div class="border border-secondary rounded px-4 py-3 mt-3 mb-3">
+            <h2>Import knih ze souboru books.json</h2>
+            <form method="POST" action="/24u/modules/knihy_router.php" >
+                <input type="hidden" name="action" value="import_books" />
+                <button type="submit" class="btn btn-secondary">Importovat knihy</button>
+            </form>
+        </div>
     </div>
