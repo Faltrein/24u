@@ -1,21 +1,20 @@
 
 
 html, body {
-  height: 100%;       /* musí být 100% výška */
+  height: 100%; 
   margin: 0;
 }
 
 .page-wrapper {
-  min-height: 100vh;      /* výška viewportu */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }
 
 main {
-  flex: 1;                /* hlavní obsah zabere všechnu volnou výšku */
+  flex: 1; 
 }
 
-/* footer se tak přilepí na spodek, ale pokud obsah je větší, jde níž */
 footer {
   background: #ccc;
 }
@@ -24,6 +23,7 @@ footer {
     cursor: pointer;
 }
 
+// připrava stránky pro print
 @media print {
     body * {
         visibility: hidden;
