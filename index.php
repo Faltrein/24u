@@ -1,13 +1,13 @@
 <?php
 // 1) Získej čistou část cesty
 $uri   = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$base  = '/u24';
+$base  = '/24u';
 $route = trim(substr($uri, strlen($base)), '/');
 
 // 2) Vyber view
 switch ($route) {
     case '':
-    case 'home':
+    case '':
         $view = 'home';
         break;
     case 'knihovna':

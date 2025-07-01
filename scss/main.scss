@@ -1,3 +1,25 @@
+
+
+html, body {
+  height: 100%;       /* musí být 100% výška */
+  margin: 0;
+}
+
+.page-wrapper {
+  min-height: 100vh;      /* výška viewportu */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                /* hlavní obsah zabere všechnu volnou výšku */
+}
+
+/* footer se tak přilepí na spodek, ale pokud obsah je větší, jde níž */
+footer {
+  background: #ccc;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
