@@ -11,11 +11,11 @@ Využizé knihovny bootstrap a PDO
 
     -> db je připojena v souboru init/db.php přes pdo
 
-        ->db = 24u_test
+        -> db = 24u_test
 
-        ->user = u24_user
+        -> user = u24_user
 
-        ->pass = heslo123!
+        -> pass = heslo123!
 
     -> při prvním načtení knihovny se vygeneruje tabulka se základními daty a při kliknutí na řádek tabulky se zobrazí modal s popisem knihy
 
