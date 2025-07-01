@@ -1,0 +1,30 @@
+[
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "annotation": "Dystopický román o totalitní budoucnosti.",
+        "rating": 4.5,
+        "year": 1949
+    },
+    {
+        "title": "Hobit",
+        "author": "J.R.R. Tolkien",
+        "annotation": "Fantasy příběh o cestě hobita Bilba Pytlíka.",
+        "rating": 4.8,
+        "year": 1937
+    },
+    {
+        "title": "Sto roků samoty",
+        "author": "Gabriel García Márquez",
+        "annotation": "Magický realismus a sága rodu Buendíů v Macondu.",
+        "rating": 4.6,
+        "year": 1967
+    },
+    {
+        "title": "Kdo chytá v žitě",
+        "author": "J.D. Salinger",
+        "annotation": "Román o dospívání a vnitřní krizi mladého chlapce Holdena.",
+        "rating": 4.2,
+        "year": 1951
+    }
+]
